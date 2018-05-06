@@ -13,7 +13,7 @@
         <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="276,237,0,3" Width="75" Click="btnStart_Click"/>
         <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="365,237,0,3" Width="75" Click="btnStop_Click"/>
         <ProgressBar x:Name="prgrBarOperationProgress" HorizontalAlignment="Left" Height="20" Margin="10,237,0,0" VerticalAlignment="Top" Width="249"/>
-        <Label FontSize="10" x:Name="lblStatusInfo" Content="Label" HorizontalAlignment="Left" Margin="-28,258,0,-22" VerticalAlignment="Top" Width="468" Height="24"/>
+        <Label FontSize="10" x:Name="lblStatusInfo" Content="Set-up main parameters and press the START button." HorizontalAlignment="Left" Margin="-28,258,0,-22" VerticalAlignment="Top" Width="468" Height="24"/>
         <ListView x:Name="ThreadsList" HorizontalAlignment="Left" Height="198" Margin="74,31,0,0" VerticalAlignment="Top" Width="366">
             <ListView.View>
                 <GridView>
