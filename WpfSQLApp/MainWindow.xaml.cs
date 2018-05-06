@@ -167,9 +167,10 @@ namespace WpfSQLApp
             {
                 // Create the Command and Parameter objects.
 
+                Random rnd = new Random(); //Random Object test
                 while ((!_cancel) && (cnt < max)) 
                 {
-                    Random rnd = new Random();
+                    
                     OleDbCommand command = new OleDbCommand(queryString, connection);
                     command.Parameters.AddWithValue("@threadId", System.Threading.Thread.CurrentThread.ManagedThreadId);
                     command.Parameters.AddWithValue("@threadtime", DateTime.Now);
