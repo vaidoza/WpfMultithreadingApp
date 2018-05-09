@@ -210,6 +210,7 @@ namespace WpfSQLApp
             btnStop.IsEnabled = false;
             _cancel = true;
             bgWorker.CancelAsync();
+            lblStatusInfo.Content = "Work stopped.";        //info fix 2018-05-09
 
         }
 
