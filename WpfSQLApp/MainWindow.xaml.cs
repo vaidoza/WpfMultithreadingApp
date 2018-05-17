@@ -57,7 +57,7 @@ namespace WpfSQLApp
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            _cancel = false;
+            
             string thrcntstr = tbxThrdCnt.Text;
             int tcnt = StrToIntParser(1, tbxThrdCnt.Text);
             lblStatusInfo.Content = "Multi-threading process started with " + tcnt + " BackgroundWorker Thread" + (tcnt == 1 ? "" : "s")  +".";
@@ -162,14 +162,16 @@ namespace WpfSQLApp
             int max = (int)e.Argument;
             int cnt=0;
             int ProgressPercentage = 0;
+            _cancel = false;    //pakeista vieta is btn1
 
             using (OleDbConnection connection = new OleDbConnection(connectionString))
             {
                 // Create the Command and Parameter objects.
 
+                Random rnd = new Random(); //Random Object test
                 while ((!_cancel) && (cnt < max)) 
                 {
-                    Random rnd = new Random();
+                    
                     OleDbCommand command = new OleDbCommand(queryString, connection);
                     command.Parameters.AddWithValue("@threadId", System.Threading.Thread.CurrentThread.ManagedThreadId);
                     command.Parameters.AddWithValue("@threadtime", DateTime.Now);
